@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view> -->
+<!-- 投票列表 -->
+<view class="votes-container">
+  <view class="votes-card" wx:for-items="{{voteList}}" wx:key="{{index}}" data-id="{{item.voteId}}">
+    <view class="img-box">
+      <image style="width:100%;" src="{{item.bannerUrl}}" mode="aspectFill" class="image" lazy-load="true"/>
+    </view>
+    <view class="vote-title">{{item.title}}</view>
+    <view class="vote-info">
+      <view>
+        <text class='iconfont iconuser'></text>
+        {{item.telepathic}}人参赛
+      </view>
+      <view>
+        <text class='iconfont icontoupiao'></text>
+        {{item.haveVote}}已投
+      </view>
+      <view>
+        <text class='iconfont iconredutu'></text>
+        {{item.hot}}热度
+      </view>
+    </view>
+    <view class="vote-finish-date">
+      投票结束：{{item.finishDate}}
+    </view>
+  </view>
+  <view hidden="{{loadingMoreHidden ? true : false}}" class="weui-loadmore weui-loadmore_line" style='margin-top:60rpx;margin-bottom:30rpx;'>
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多啦</view>
+  </view>
+</view>
+<!-- 悬浮按钮 -->
+<view class="float-button">
+  <text class='iconfont iconxinjian'></text>
+</view>

@@ -1,0 +1,54 @@
+/**index.wxss**/
+.votes-card{
+  background-color: #ffffff;
+  margin: 30rpx 30rpx 0 30rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  box-shadow: 0 8px 12px #ebedf0;
+  color: #8e8e8e;
+}
+.votes-card .img-box{
+  width: 100%;
+  height: 350rpx;
+  overflow: hidden;
+}
+.votes-card .vote-title{
+  padding: 18rpx 25rpx;
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #343434;
+}
+.votes-card  .vote-info{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 25rpx;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.votes-card  .vote-info .iconfont{
+  color: #5aadff;
+  font-size: 28rpx;
+}
+.votes-card .vote-finish-date{
+  padding: 10rpx 25rpx;
+  padding-bottom: 35rpx;
+  font-size: 24rpx;
+}
+
+.float-button{
+  position: fixed;
+  right: 60rpx;
+  bottom: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 3px #a6aaad;
+} 
+.float-button .iconfont{
+  color: #52a9ff;
+  font-size: 60rpx;
+}
